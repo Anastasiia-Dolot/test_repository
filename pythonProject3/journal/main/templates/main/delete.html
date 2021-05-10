@@ -1,0 +1,11 @@
+{% extends 'main/base.html'%}
+
+{% block title%}Удалить новость{% endblock %}
+
+{% block body%}
+<form method="post">
+    {% csrf_token %}
+    <h4>Вы подтверждаете удаление новости "{{ object.name }}" ?</h4>
+    <button type="submit" class="btn btn-outline-danger">Да, удалить</button>
+</form>
+{% endblock %}

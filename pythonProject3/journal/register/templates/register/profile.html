@@ -1,0 +1,15 @@
+{% extends 'main/base.html'%}
+
+{% block title %}Профиль{% endblock %}
+
+{% block body %}
+<img width="100" height="100" src="{{ user.profile.img.url }}">
+Вы в учетной записи, {{user.username}}
+<a href="{% url 'addnews' %}"><button class="btn btn-outline-success">Добавить новость</button></a>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ user_change_f }}
+    {{ img_change_f }}
+    <button type="submit" class="btn btn-outline-success">Сохранить изменения</button>
+</form>
+{% endblock %}
