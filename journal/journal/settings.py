@@ -12,9 +12,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '=#u*91&xf)4yzs^k_g&q!gf%xfs2p1ynm(=98kqy6_&qssd8x5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['13.37.27.163', 'localhost', '127.0.0.1']
 
 # Application definition
 
