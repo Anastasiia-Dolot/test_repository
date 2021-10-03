@@ -4,7 +4,6 @@ node("Prod") {
     if (buildNumber > 1) milestone(buildNumber - 1)
     milestone(buildNumber)
     }
-  }
   stage("Docker build$up") {
     sh "docker-compose build"
     sh "docker images"
