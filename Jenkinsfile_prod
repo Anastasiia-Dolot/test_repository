@@ -6,8 +6,8 @@ node("Prod") {
     }
   }
   stage("Docker build$up") {
-    docker-compose build
-    docker images
-    docker-compose up
+    sh "docker-compose build"
+    sh "docker images"
+    sh "docker-compose up -d"
   }
 }
