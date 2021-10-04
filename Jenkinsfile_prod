@@ -1,11 +1,5 @@
 node("Prod") {
   stage("Check Preconditions") {
-    if (!continueBuild) {
-    currentBuild.result = 'ABORTED'
-    error('Stopping early…')
-    }
-  }
-  stage("Docker build$up") {
     sh "docker-compose build"
     sh "docker images"
     sh "docker-compose up -d"
