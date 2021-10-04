@@ -1,7 +1,0 @@
-node("Prod") {
-  stage("Check Preconditions") {
-    sh "docker-compose build"
-    sh "docker images"
-    sh "docker-compose up -d"
-  }
-}
